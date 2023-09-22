@@ -1,0 +1,38 @@
+#include<iostream>
+using namespace std;
+
+int main() 
+{
+    float angka1, angka2;
+    char op;
+
+    cout << "Angka pertama: ";
+    cin >> angka1;
+    cout << "Masukkan operator (+, -, *, /): ";
+    cin >> op;
+    cout << "Angka kedua: ";
+    cin >> angka2;
+
+    switch (op) {
+    case '+':
+        cout << "Hasil: " << angka1 + angka2;
+        break;
+    case '-':
+        cout << "Hasil: " << angka1 - angka2;
+        break;
+    case '*':
+        cout << "Hasil: " << angka1 * angka2;
+        break;
+    case '/':
+        if (angka2 != 0)
+            cout << "Hasil: " << angka1 / angka2;
+        else
+            cout << "Error! Nilai Tak hingga.";
+        break;
+    default:
+        cout << "Kesalahan Input Operator.";
+        break;
+    }
+
+    return 0;
+}
